@@ -32,10 +32,10 @@ jobs:
 
       - name: Pack extension
         run: npm pack
-        
+
       - name: Release
         uses: softprops/action-gh-release@v0.1.14
         with:
-          tag_name: v${{ env.RELEASE_VERSION }}
+          tag_name: ${{ env.RELEASE_VERSION }}
           files: | 
-            alebcay-openlens-node-pod-menu-${{ env.RELEASE_VERSION }}.tgz
+            mherwig-openlens-node-pod-menu-${{ env.RELEASE_VERSION }}.tgz
