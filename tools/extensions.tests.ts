@@ -40,7 +40,7 @@ describe("extensions page tests", () => {
     await window.waitForSelector(install_button_selector.concat('[data-waiting=false]'));
 
     const installedExtensionName = await (await window.waitForSelector('div[class*="installed-extensions-module__extensionName--"]')).textContent()
-    expect(installedExtensionName).toBe("@alebcay/openlens-node-pod-menu")
+    expect(installedExtensionName).toBe("@mherwig/openlens-node-pod-menu")
     const installedExtensionState = await (await window.waitForSelector('div[class*="installed-extensions-module__enabled--"]')).textContent()
     expect(installedExtensionState).toBe("Enabled")
   }, 10*60*1000);
